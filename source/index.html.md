@@ -3,9 +3,6 @@ title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
-  - ruby
-  - python
-  - javascript
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -30,70 +27,31 @@ This example API documentation page was created with [Slate](https://github.com/
 
 > To authorize, use this code:
 
-```ruby
-require 'SparkToro'
-
-api = SparkToro::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import SparkToro
-
-api = SparkToro.authorize('meowmeowmeow')
-```
-
 ```shell
 # With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+curl "https://api.sparktoro.com/"
+  -H "Authorization: Bearer your_bearer_key"
 ```
 
-```javascript
-const SparkToro = require('SparkToro');
-
-let api = SparkToro.authorize('meowmeowmeow');
-```
-
-> Make sure to replace `meowmeowmeow` with your API key.
+> Make sure to replace `your_bearer_key` with your API key.
 
 SparkToro uses API keys to allow access to the API. You can register a new SparkToro API key at our [developer portal](http://example.com/developers).
 
 SparkToro expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: meowmeowmeow`
+`Authorization: Bearer your_bearer_key`
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+You must replace <code>your_bearer_key</code> with your personal API key.
 </aside>
 
 # Audience Intelligence
 
 ## Get All Kittens
 
-```ruby
-require 'SparkToro'
-
-api = SparkToro::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import SparkToro
-
-api = SparkToro.authorize('meowmeowmeow')
-api.kittens.get()
-```
-
 ```shell
 curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const SparkToro = require('SparkToro');
-
-let api = SparkToro.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+  -H "Authorization: Bearer your_bearer_key"
 ```
 
 > The above command returns JSON structured like this:
@@ -136,30 +94,9 @@ Remember — a happy kitten is an authenticated kitten!
 
 ## Get a Specific Kitten
 
-```ruby
-require 'SparkToro'
-
-api = SparkToro::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import SparkToro
-
-api = SparkToro.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
 ```shell
 curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const SparkToro = require('SparkToro');
-
-let api = SparkToro.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
+  -H "Authorization: Bearer your_bearer_key"
 ```
 
 > The above command returns JSON structured like this:
@@ -193,27 +130,27 @@ ID | The ID of the kitten to retrieve
 ```ruby
 require 'SparkToro'
 
-api = SparkToro::APIClient.authorize!('meowmeowmeow')
+api = SparkToro::APIClient.authorize!('Bearer your_bearer_key')
 api.kittens.delete(2)
 ```
 
 ```python
 import SparkToro
 
-api = SparkToro.authorize('meowmeowmeow')
+api = SparkToro.authorize('Bearer your_bearer_key')
 api.kittens.delete(2)
 ```
 
 ```shell
 curl "http://example.com/api/kittens/2"
   -X DELETE
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: Bearer your_bearer_key"
 ```
 
 ```javascript
 const SparkToro = require('SparkToro');
 
-let api = SparkToro.authorize('meowmeowmeow');
+let api = SparkToro.authorize('Bearer your_bearer_key');
 let max = api.kittens.delete(2);
 ```
 
