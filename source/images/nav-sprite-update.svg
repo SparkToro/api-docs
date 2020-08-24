@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="product" viewBox="0 0 16 15.999">
+    <g id="Group_35" data-name="Group 35" transform="translate(-952 -521)">
+        <g id="Subtraction_1" data-name="Subtraction 1" transform="translate(-4591 2578)" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M 5558.25 -2041.750122070312 L 5543.74951171875 -2041.750122070312 L 5543.74951171875 -2056.24951171875 L 5558.25 -2056.24951171875 L 5558.25 -2041.750122070312 Z M 5547.24951171875 -2052.750732421875 L 5547.24951171875 -2052.000732421875 L 5547.24951171875 -2046.000244140625 L 5547.24951171875 -2045.250244140625 L 5547.99951171875 -2045.250244140625 L 5554 -2045.250244140625 L 5554.75 -2045.250244140625 L 5554.75 -2046.000244140625 L 5554.75 -2052.000732421875 L 5554.75 -2052.750732421875 L 5554 -2052.750732421875 L 5547.99951171875 -2052.750732421875 L 5547.24951171875 -2052.750732421875 Z" stroke="none"/>
+            <path d="M 5557.5 -2042.500122070312 L 5557.5 -2055.49951171875 L 5544.49951171875 -2055.49951171875 L 5544.49951171875 -2042.500122070312 L 5557.5 -2042.500122070312 M 5547.99951171875 -2053.500732421875 L 5554 -2053.500732421875 C 5554.82861328125 -2053.500732421875 5555.5 -2052.8291015625 5555.5 -2052.000732421875 L 5555.5 -2046.000244140625 C 5555.5 -2045.171875 5554.82861328125 -2044.500244140625 5554 -2044.500244140625 L 5547.99951171875 -2044.500244140625 C 5547.1708984375 -2044.500244140625 5546.49951171875 -2045.171875 5546.49951171875 -2046.000244140625 L 5546.49951171875 -2052.000732421875 C 5546.49951171875 -2052.8291015625 5547.1708984375 -2053.500732421875 5547.99951171875 -2053.500732421875 M 5559 -2041.000122070312 L 5558.9990234375 -2041.000122070312 L 5542.99951171875 -2041.000122070312 L 5542.99951171875 -2056.99951171875 L 5559 -2056.99951171875 L 5559 -2041.001098632812 L 5559 -2041.000122070312 Z M 5547.99951171875 -2052.000732421875 L 5547.99951171875 -2046.000244140625 L 5554 -2046.000244140625 L 5554 -2052.000732421875 L 5547.99951171875 -2052.000732421875 Z" stroke="none" />
+        </g>
+    </g>
+  </symbol>
+
+  <symbol id="pricing" viewBox="0 0 16 16">
+    <g id="Group_34" data-name="Group 34" transform="translate(-952 -487)">
+        <g id="Group_31" data-name="Group 31" transform="translate(689 448)">
+            <g id="Rectangle_126" data-name="Rectangle 126" transform="translate(279 39) rotate(90)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                <rect width="16" height="16" stroke="none"/>
+            </g>
+            <path class="force_white_stroke force_no_fill" data-name="Path 110" d="M217.842,2098.9l1.667,1.667,6.259-6.26" transform="translate(49.949 -2050.25)" fill="none" stroke="#fffff" style="stroke: white;" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+    </g>
+  </symbol>
+
+  <symbol id="about" viewBox="0 0 20.5 19.167">
+    <g id="Group_33" data-name="Group 33" transform="translate(-950.25 -451.25)">
+        <path id="Union_2" data-name="Union 2" d="M197-2043.323V-2057h19v13.677H201.032L197-2039.332Z" transform="translate(754 2509)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+        <line id="Line_874" data-name="Line 874" x2="11" transform="translate(955 457)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+        <line id="Line_875" data-name="Line 875" x2="9" transform="translate(955 461)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      </g>
+  </symbol>
+
+  <symbol id="resource" viewBox="0 0 19.72 16.112">
+    <g id="Group_32" data-name="Group 32" transform="translate(-949.938 -419.004)">
+        <path d="M17.535,43.693H8.745l-.982-2.032a.714.714,0,0,0-.616-.388H.685A.673.673,0,0,0,0,41.958V55.2a.673.673,0,0,0,.685.685h16.85a.673.673,0,0,0,.685-.685V44.378A.673.673,0,0,0,17.535,43.693Z" transform="translate(950.688 378.481)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </symbol>
+
+
+
+  <symbol id="ai" viewBox="0 0 18.066 21.336">
+    <path d="M335.124,146.112v-2.985h3.664c1.178,0,1.656-.6,1.656-1.565v-3.227h1.388c.591,0,.52-.459.33-.764s-1.717-2.786-1.717-2.786v-2.157a7.243,7.243,0,0,0-7.476-7.1c-5.863-.068-7.233,5.537-7.233,6.658a8.052,8.052,0,0,0,1.908,5.758c.017-.017,0,8.168,0,8.168" transform="translate(-324.985 -124.777)" fill="none" stroke-width="1.5"/>
+  </symbol>
+
+  <symbol id="home" viewBox="0 0 48 46">
+    <g id="Layer_2">
+      <polyline class="st2" points="47.2,19 24,1.1 1,18.9 4.1,16.5 4.1,45 43.9,45 43.9,16.5   "  stroke-width="4"/>
+      <line class="st2" x1="34.8" y1="9.5" x2="34.8" y2="5.8" stroke-width="4"/>
+      <line class="st2" x1="40.5" y1="5.8" x2="34" y2="5.8" stroke-width="4"/>
+      <line class="st2" x1="39.8" y1="5.1" x2="39.8" y2="13.2" stroke-width="4"/>
+      <line class="st2" x1="17" y1="25.7" x2="31" y2="25.7" stroke-width="4"/>
+      <line class="st2" x1="17.7" y1="44.8" x2="17.7" y2="24.9" stroke-width="4"/>
+      <line class="st2" x1="30.3" y1="44.6" x2="30.3" y2="24.9" stroke-width="4"/>
+    </g>
+  </symbol>
+
+  <symbol id="compare" viewBox="0 0 22.179 18.063">
+    <g id="Group_38" data-name="Group 38" transform="translate(-949.636 -612.813)">
+      <g id="Group_2" data-name="Group 2" transform="translate(1420.564 787.112) rotate(90)">
+        <g id="surface1" transform="translate(-173.532 457.665)">
+          <path id="Path_5" data-name="Path 5" d="M277.238,5.908l-4.2-5.67a.588.588,0,0,0-.945,0l-4.2,5.67a.588.588,0,0,0,.473.938h1.512v5.077a.588.588,0,0,0,.588.588h4.2a.588.588,0,0,0,.588-.588V6.847h1.512a.588.588,0,0,0,.473-.938Zm0,0" transform="translate(-267.777)" fill="none" stroke-width="1.5"/>
+        </g>
+        <g id="surface1-2" data-name="surface1" transform="translate(-157.003 462.01) rotate(180)">
+          <path id="Path_5-2" data-name="Path 5" d="M9.461,5.908,5.261.238a.588.588,0,0,0-.945,0l-4.2,5.67a.588.588,0,0,0,.473.938H2.1v5.077a.588.588,0,0,0,.588.588h4.2a.588.588,0,0,0,.588-.588V6.847H8.989a.588.588,0,0,0,.473-.938Zm0,0" transform="translate(0)" fill="none" stroke-width="1.5"/>
+        </g>
+      </g>
+    </g>
+  </symbol>
+
+  <symbol id="profile" viewBox="0 0 15.473 20.57">
+    <g id="Group_37" data-name="Group 37" transform="translate(-952.005 -641.765)">
+      <g id="Group_3" data-name="Group 3" transform="translate(62 609)">
+        <path id="Path_9" data-name="Path 9" d="M17.744,6.808a4.382,4.382,0,1,1-4.381,4.382A4.382,4.382,0,0,1,17.744,6.808Zm0,19.07a9.723,9.723,0,0,1-6.331-2.335,1.867,1.867,0,0,1-.655-1.419A4.419,4.419,0,0,1,15.2,17.706h5.1a4.413,4.413,0,0,1,4.434,4.418,1.863,1.863,0,0,1-.655,1.419A9.719,9.719,0,0,1,17.742,25.878Z" transform="translate(880 26.707)" fill="none" stroke-width="1.5"/>
+      </g>
+    </g>
+  </symbol>
+
+  <symbol id="lists" viewBox="0 0 21 12">
+    <g id="Group_39" data-name="Group 39" transform="translate(-949 -584)">
+      <g id="Group_36" data-name="Group 36">
+        <g id="Group_4" data-name="Group 4" transform="translate(-185 550)">
+          <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(1141 34)" stroke-width="1.5">
+            <rect x="0.75" y="0.75" width="12.5" height="3.5" rx="1.75" fill="none"/>
+          </g>
+          <g id="Rectangle_7" data-name="Rectangle 7" transform="translate(1134 34)" stroke-width="1.5">
+            <rect x="0.75" y="0.75" width="3.5" height="3.5" rx="1.75" fill="none"/>
+          </g>
+          <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(1141 41)" stroke-width="1.5">
+            <rect x="0.75" y="0.75" width="12.5" height="3.5" rx="1.75" fill="none"/>
+          </g>
+          <g id="Rectangle_6" data-name="Rectangle 6" transform="translate(1134 41)" stroke-width="1.5">
+            <rect x="0.75" y="0.75" width="3.5" height="3.5" rx="1.75" fill="none"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </symbol>
+
+  <symbol id="import-icon" viewBox="0 0 22.5 28.5">
+    <g id="Group_2" transform="translate(-15 -11)">
+      <g id="Subtraction_8" transform="translate(15 -1.106)">
+        <path class="st0" d="M18.8,38.4c0.8,0,1.5-0.7,1.5-1.5V22.1l-7.7-7.7H3.7c-0.8,0-1.5,0.7-1.5,1.5v21c0,0.8,0.7,1.5,1.5,1.5H18.8
+           M18.8,39.9h-15c-1.7,0-3-1.3-3-3v-21c0-1.7,1.3-3,3-3h9.4l8.6,8.6v15.4C21.7,38.5,20.4,39.9,18.8,39.9z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+      <line id="Line_1183" class="st1" x1="21.2" y1="25.2" x2="31.2" y2="25.2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      <line id="Line_1184" class="st1" x1="21.2" y1="30.2" x2="31.2" y2="30.2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+    </g>
+  </symbol>
+
+  <symbol id="case-study-nav" viewBox="0 0 14 16">
+    <g id="Group_381" data-name="Group 381" transform="translate(-367 -108)">
+      <g id="Subtraction_7" data-name="Subtraction 7" transform="translate(7684 -6166.071)">
+        <path d="M -7303.9990234375 6289.3203125 L -7315.99951171875 6289.3203125 C -7316.1376953125 6289.3203125 -7316.25048828125 6289.20849609375 -7316.25048828125 6289.0712890625 L -7316.25048828125 6275.0712890625 C -7316.25048828125 6274.93310546875 -7316.1376953125 6274.82080078125 -7315.99951171875 6274.82080078125 L -7309.96728515625 6274.82080078125 L -7303.822265625 6280.96533203125 C -7303.798828125 6280.9892578125 -7303.77490234375 6281.01220703125 -7303.75 6281.0341796875 L -7303.75 6289.0712890625 C -7303.75 6289.20849609375 -7303.86181640625 6289.3203125 -7303.9990234375 6289.3203125 Z" />
+        <path d="M -7304.5 6288.5703125 L -7304.5 6281.34814453125 L -7310.27783203125 6275.57080078125 L -7315.50048828125 6275.57080078125 L -7315.50048828125 6288.5703125 L -7304.5 6288.5703125 M -7303.9990234375 6290.0703125 L -7315.99951171875 6290.0703125 C -7316.55126953125 6290.0703125 -7317.00048828125 6289.6220703125 -7317.00048828125 6289.0712890625 L -7317.00048828125 6275.0712890625 C -7317.00048828125 6274.51953125 -7316.55126953125 6274.07080078125 -7315.99951171875 6274.07080078125 L -7309.65673828125 6274.07080078125 L -7303.2919921875 6280.43505859375 C -7303.20751953125 6280.5205078125 -7303.109375 6280.58935546875 -7303 6280.63916015625 L -7303 6289.0712890625 C -7303 6289.6220703125 -7303.4482421875 6290.0703125 -7303.9990234375 6290.0703125 Z" />
+      </g>
+      <g id="Intersection_11" data-name="Intersection 11" transform="translate(-6928.657 6388.638) rotate(180)">
+        <path d="M -7303.75 6278.91650390625 L -7307.84619140625 6274.82080078125 L -7303.9990234375 6274.82080078125 C -7303.86181640625 6274.82080078125 -7303.75 6274.93310546875 -7303.75 6275.0712890625 L -7303.75 6278.91650390625 Z" />
+        <path d="M -7304.5 6277.10595703125 L -7304.5 6275.57080078125 L -7306.03515625 6275.57080078125 L -7304.5 6277.10595703125 M -7303 6280.638671875 C -7303.10595703125 6280.59033203125 -7303.205078125 6280.5224609375 -7303.2919921875 6280.43505859375 L -7309.65673828125 6274.07080078125 L -7303.9990234375 6274.07080078125 C -7303.4482421875 6274.07080078125 -7303 6274.5185546875 -7303 6275.0712890625 L -7303 6280.638671875 Z" />
+      </g>
+    </g>
+  </symbol>
+
+  <symbol id="tool" viewBox="0 0 15.315 15.315">
+    <g id="Group_379" data-name="Group 379" transform="translate(-224.104 -109.058)">
+      <path id="tool" d="M13.548,2.914,11.281,5.181,9.3,4.473,8.589,2.489,10.856.222A4.272,4.272,0,0,0,5.42,5.548a2.009,2.009,0,0,0-.178.158L.585,10.363a2,2,0,0,0,2.822,2.822L8.064,8.528a2.015,2.015,0,0,0,.158-.178,4.272,4.272,0,0,0,5.326-5.436Z" transform="translate(224.853 109.854)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="blog-nav" viewBox="0 0 19.5 21.346">
+    <g id="Group_380" data-name="Group 380" transform="translate(-111.75 -107.75)">
+      <path id="Union_26" data-name="Union 26" d="M-7313.527,6282.09H-7314a2.5,2.5,0,0,1-2.5-2.5V6270a2.5,2.5,0,0,1,2.5-2.5h13a2.5,2.5,0,0,1,2.5,2.5v9.588a2.5,2.5,0,0,1-2.5,2.5h-7.394l-5.133,5.255Z" transform="translate(7429 -6159)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <g id="Ellipse_339" data-name="Ellipse 339" transform="translate(115 114)" class="force_white_fill" stroke-width="1.5">
+        <circle cx="1.5" cy="1.5" r="1.5" stroke="none"/>
+        <circle cx="1.5" cy="1.5" r="0.75" fill="none"/>
+      </g>
+      <g id="Ellipse_340" data-name="Ellipse 340" transform="translate(120 114)" class="force_white_fill" stroke-width="1.5">
+        <circle cx="1.5" cy="1.5" r="1.5" stroke="none"/>
+        <circle cx="1.5" cy="1.5" r="0.75" fill="none"/>
+      </g>
+      <g id="Ellipse_341" data-name="Ellipse 341" transform="translate(125 114)" class="force_white_fill" stroke-width="1.5">
+        <circle cx="1.5" cy="1.5" r="1.5" stroke="none"/>
+        <circle cx="1.5" cy="1.5" r="0.75" fill="none"/>
+      </g>
+    </g>
+  </symbol>
+
+
+  <symbol id="account-billing" viewBox="0 0 9.5 24.5">
+    <g id="Group_355" data-name="Group 355" transform="translate(5322.75 -7862.75)">
+      <g id="Group_354" data-name="Group 354">
+        <path id="Path_517" data-name="Path 517" d="M3,0H5A3,3,0,0,1,8,3V5A3,3,0,0,1,5,8H3A3,3,0,0,1,0,5V3" transform="translate(-5314 7875) rotate(180)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Path_518" data-name="Path 518" d="M3,0H5A3,3,0,0,1,8,3V5A3,3,0,0,1,5,8H3A3,3,0,0,1,0,5V3" transform="translate(-5322 7875)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+      <line id="Line_1181" data-name="Line 1181" y1="3" transform="translate(-5318 7863.5)" fill="none" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="Line_1182" data-name="Line 1182" y1="3" transform="translate(-5318 7883.5)" fill="none" stroke-linecap="round" stroke-width="1.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="account-settings" viewBox="0 0 31.404 31.404">
+    <g id="settings" transform="translate(0.75 0.75)">
+      <g id="Group_360" data-name="Group 360" transform="translate(10.686 10.686)">
+        <g id="Group_359" data-name="Group 359">
+          <path id="Path_526" data-name="Path 526" d="M215.267,211a4.267,4.267,0,1,0,4.267,4.267A4.271,4.271,0,0,0,215.267,211Z" transform="translate(-211 -211)" fill="none" stroke-width="1.5"/>
+        </g>
+      </g>
+      <g id="Group_362" data-name="Group 362">
+        <g id="Group_361" data-name="Group 361">
+          <path id="Path_527" data-name="Path 527" d="M29.305,12.369l-3.6-1.182a11.094,11.094,0,0,0-.487-1.171l1.673-3.344a.876.876,0,0,0-.164-1.011L24.244,3.182a.876.876,0,0,0-1.011-.164L19.889,4.69A11.089,11.089,0,0,0,18.717,4.2L17.535.6A.875.875,0,0,0,16.7,0H13.2a.875.875,0,0,0-.831.6L11.187,4.2a11.094,11.094,0,0,0-1.171.487L6.671,3.018a.873.873,0,0,0-1.011.164L3.182,5.66a.876.876,0,0,0-.164,1.011L4.69,10.015A11.089,11.089,0,0,0,4.2,11.187L.6,12.369A.875.875,0,0,0,0,13.2v3.5a.875.875,0,0,0,.6.831l3.6,1.182a11.094,11.094,0,0,0,.487,1.171L3.018,23.233a.876.876,0,0,0,.164,1.011L5.66,26.722a.874.874,0,0,0,1.011.164l3.344-1.673a11.089,11.089,0,0,0,1.171.487l1.182,3.6a.875.875,0,0,0,.831.6h3.5a.875.875,0,0,0,.831-.6l1.182-3.6a11.094,11.094,0,0,0,1.171-.487l3.344,1.673a.879.879,0,0,0,1.011-.164l2.478-2.478a.876.876,0,0,0,.164-1.011l-1.673-3.344a11.089,11.089,0,0,0,.487-1.171l3.6-1.182a.875.875,0,0,0,.6-.831V13.2A.875.875,0,0,0,29.305,12.369Z" fill="none" stroke-width="1.5"/>
+        </g>
+      </g>
+    </g>
+  </symbol>
+
+  <symbol id="account-user" viewBox="0 0 28.747 28.706">
+    <g id="Group_357" data-name="Group 357" transform="translate(5249.6 -7855.298)">
+      <path id="Path_519" data-name="Path 519" d="M19.212,6.808a5.849,5.849,0,1,1-5.848,5.849A5.85,5.85,0,0,1,19.212,6.808Z" transform="translate(-5255.467 7849.24)" fill="none" stroke-width="1.5"/>
+      <path id="Path_520" data-name="Path 520" d="M28.719,35A15.778,15.778,0,0,1,15.3,27.408" transform="translate(-5213.849 7854.535) rotate(90)" fill="none" stroke-linecap="round" stroke-width="1.5"/>
+      <g id="gear" transform="translate(-5242.484 7868.746)">
+        <g id="Group_356" data-name="Group 356" transform="translate(6.71)">
+          <path id="Path_521" data-name="Path 521" d="M20.593,8.844,19.26,7.8a5.25,5.25,0,0,0,.031-.548,5.091,5.091,0,0,0-.031-.548l1.335-1.043a.654.654,0,0,0,.158-.833l-1.387-2.4a.643.643,0,0,0-.8-.288l-1.574.632a5.4,5.4,0,0,0-.945-.548L15.806.556A.642.642,0,0,0,15.165,0H12.384a.64.64,0,0,0-.64.551L11.5,2.226a5.561,5.561,0,0,0-.943.548L8.984,2.141a.656.656,0,0,0-.8.283L6.8,4.827a.65.65,0,0,0,.157.837L8.29,6.707a4.783,4.783,0,0,0,0,1.095L6.955,8.845a.654.654,0,0,0-.157.833l1.387,2.4a.642.642,0,0,0,.8.288l1.574-.632a5.443,5.443,0,0,0,.944.548l.239,1.668a.642.642,0,0,0,.641.557h2.781a.641.641,0,0,0,.64-.551l.24-1.674a5.587,5.587,0,0,0,.943-.549l1.578.633a.65.65,0,0,0,.237.045.638.638,0,0,0,.559-.328l1.393-2.412A.653.653,0,0,0,20.593,8.844Zm-6.819.828a2.418,2.418,0,1,1,2.418-2.418A2.42,2.42,0,0,1,13.775,9.672Z" transform="translate(-6.71)" fill="none" stroke-width="1.5"/>
+        </g>
+      </g>
+    </g>
+  </symbol>
+
+  <symbol id="account-switch" viewBox="0 0 23.187 21.441">
+    <g id="Group_358" data-name="Group 358" transform="translate(5174.75 -7860.619)">
+      <path id="Path_522" data-name="Path 522" d="M24,14a5,5,0,0,1-5,5H3.785" transform="translate(-5150 7884) rotate(180)" fill="#fff" stroke-linecap="round" stroke-width="1.5"/>
+      <path id="Path_525" data-name="Path 525" d="M24,14a5,5,0,0,1-5,5H3.785" transform="translate(-5176.314 7858.68)" fill="#fff" stroke-linecap="round" stroke-width="1.5"/>
+      <path id="Path_523" data-name="Path 523" d="M-5151.333,7861.6l3.081-3.081,3.081,3.081" transform="translate(2706.208 13013.013) rotate(90)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_524" data-name="Path 524" d="M-5151.333,7861.6l3.081-3.081,3.081,3.081" transform="translate(-13032.521 2729.667) rotate(-90)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </symbol>
+</svg>

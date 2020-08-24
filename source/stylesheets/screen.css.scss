@@ -4,6 +4,32 @@
 @import 'icon-font';
 // @import 'rtl'; // uncomment to switch to RTL format
 
+@import 'sparktoro_varibles';
+
+@import 'mixins/rotate.scss';
+@import 'mixins/slider.scss';
+@import 'mixins/placeholder.scss';
+@import 'mixins/misc.scss';
+
+@import 'bootstrap/bootstrap-reboot.scss';
+@import 'bootstrap/bootstrap-grid.scss';
+@import 'bootstrap/bootstrap.scss';
+
+@import 'shared/sparktoro';
+@import 'shared/navigation';
+@import 'shared/footer';
+
+#navigation-new {
+  border-bottom: 1px solid #EEEEEF;
+}
+
+.doc-container {
+  &.container-fluid {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 /*
 Copyright 2008-2013 Concur Technologies, Inc.
 
@@ -30,7 +56,6 @@ html, body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @extend %default-font;
   background-color: $main-bg;
   height: 100%;
   -webkit-text-size-adjust: none; /* Never autoresize text */
@@ -48,19 +73,21 @@ html, body {
 }
 
 .toc-wrapper {
-  transition: left 0.3s ease-in-out;
-
-  overflow-y: auto;
-  overflow-x: hidden;
-  position: fixed;
-  z-index: 30;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: $nav-width;
-  background-color: $nav-bg;
-  font-size: 13px;
+  // transition: left 0.3s ease-in-out;
+  // overflow-y: auto;
+  // overflow-x: hidden;
+  // position: fixed;
+  // z-index: 30;
+  // top: 0;
+  // left: 0;
+  // bottom: 0;
+  // width: $nav-width;
+  // background-color: $nav-bg;
+  font-size: 18px;
   font-weight: bold;
+  top: 25px;
+  margin-top: 25px;
+  text-align: center;
 
   // language selector for mobile devices
   .lang-selector {
@@ -92,6 +119,7 @@ html, body {
       outline: none;
       color: $nav-text;
       border-radius: 0; /* ios has a default border radius */
+      font-size: 15px;
     }
 
     &:before {
@@ -121,11 +149,14 @@ html, body {
     li {
       margin: 1em $nav-padding;
       line-height: 1;
+      font-size: 15px;
     }
 
     a {
       color: $nav-text;
       text-decoration: none;
+      font-size: 15px;
+      padding: 0;
 
       &:hover {
         text-decoration: underline;
@@ -141,7 +172,8 @@ html, body {
     list-style: none;
     margin: 0;
     padding: 0;
-    line-height: 28px;
+    line-height: 40px;
+    text-align: left;
   }
 
   li {
@@ -149,6 +181,12 @@ html, body {
     transition-property: background;
     transition-timing-function: linear;
     transition-duration: 200ms;
+
+    &> a {
+      font-size: 15px;
+      padding: 0 30px;
+      font-weight: 500;
+    }
   }
 
   // This is the currently selected ToC entry
@@ -167,6 +205,10 @@ html, body {
     display: none;
     background-color: $nav-subitem-bg;
     font-weight: 500;
+
+    li>a {
+      padding-left: 40px;
+    }
   }
 
   .toc-h2 {
@@ -177,7 +219,6 @@ html, body {
   .toc-footer {
     padding: 1em 0;
     margin-top: 1em;
-    border-top: 1px dashed $nav-footer-border-color;
 
     li,a {
       color: $nav-text;
@@ -192,6 +233,10 @@ html, body {
       font-size: 0.8em;
       line-height: 1.7;
       text-decoration: none;
+
+      &> a {
+        padding: 0;
+      }
     }
   }
 }
@@ -246,14 +291,18 @@ html, body {
 ////////////////////////////////////////////////////////////////////////////////
 // PAGE LAYOUT AND CODE SAMPLE BACKGROUND
 ////////////////////////////////////////////////////////////////////////////////
+.doc-container {
+  background-color: #FCFCFC;
+}
+
 
 .page-wrapper {
-  margin-left: $nav-width;
+  // margin-left: $nav-width;
   position: relative;
   z-index: 10;
   background-color: $main-bg;
   min-height: 100%;
-
+  border-left: 1px solid #EEEEEF;
   padding-bottom: 1px; // prevent margin overflow
 
   // The dark box is what gives the code samples their dark background.
@@ -271,7 +320,6 @@ html, body {
   }
 
   .lang-selector {
-    position: fixed;
     z-index: 50;
     border-bottom: 5px solid $lang-select-active-bg;
   }
@@ -287,9 +335,10 @@ html, body {
     display: inline;
     color: $lang-select-text;
     text-decoration: none;
-    padding: 0 10px;
-    line-height: 30px;
+    padding: 0 40px;
+    line-height: 70px;
     outline: 0;
+    text-transform: capitalize;
 
     &:active, &:focus {
       background-color: $lang-select-pressed-bg;
@@ -320,6 +369,7 @@ html, body {
   // to place content above the dark box
   position: relative;
   z-index: 30;
+  font-size: 15px;
 
   &:after {
     content: '';
@@ -443,6 +493,7 @@ html, body {
   p, li, dt, dd {
     line-height: 1.6;
     margin-top: 0;
+    font-size: 15px;
   }
 
   img {
@@ -458,8 +509,16 @@ html, body {
   }
 
   pre>code {
-    background-color: transparent;
-    padding: 0;
+    display: block;
+    background-color: #212429;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: rgba(0,0,0,0.2) 0 0 2px inset;
+    line-height: 1.5;
+    font-size: 12px;
+    //font-family: "Monaco", "consolas", monospace;
+    white-space: pre-wrap;
+    word-break: break-all;
   }
 
   aside {
@@ -517,7 +576,7 @@ html, body {
   }
 
   pre, blockquote {
-    background-color: $code-bg;
+    // background-color: $code-bg;
     color: #fff;
 
     margin: 0;
@@ -525,6 +584,8 @@ html, body {
 
     float:right;
     clear:right;
+
+    padding: 20px 28px;
 
     box-sizing: border-box;
 
@@ -541,16 +602,16 @@ html, body {
 
   pre {
     @extend %code-font;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    padding: 2em $main-padding;
+    padding: 0 28px 10px 28px;
+    background-color: transparent;
   }
 
   blockquote {
     &>p {
-      background-color: $code-annotation-bg;
-      padding: $code-annotation-padding 2em;
-      color: #eee;
+      //background-color: $code-annotation-bg;
+      //padding: $code-annotation-padding 2em;
+      color: #fff;
+      font-size: 15px;
     }
   }
 }
@@ -626,6 +687,8 @@ html, body {
   opacity: 0.4;
   height: 18px;
   width: 18px;
+  margin-top: 8px;
+  margin-right: 8px;
 }
 
 .copy-clipboard:hover {

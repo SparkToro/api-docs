@@ -40,6 +40,7 @@ under the License.
       }
       <%= Rouge::Themes::Base16::Solarized.render(:scope => '.highlight') %>
     </style>
+    <link href="https://fonts.googleapis.com/css?family=Kumar+One|Kumar+One+Outline|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Open+Sans+Condensed:300,700|Open+Sans:300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag :screen, media: :screen %>
     <% if current_page.data.search %>
       <%= javascript_include_tag  "all" %>
@@ -55,72 +56,89 @@ under the License.
   </head>
 
   <body class="<%= page_classes %>" data-languages="<%=h language_tabs.map{ |lang| lang.is_a?(Hash) ? lang.keys.first : lang }.to_json %>">
-    <a href="#" id="nav-button">
-      <span>
-        NAV
-        <%= image_tag('navbar.png') %>
-      </span>
-    </a>
-    <div class="toc-wrapper">
-      <% if language_tabs.any? %>
-        <div class="lang-selector">
-          <% language_tabs.each do |lang| %>
-            <% if lang.is_a? Hash %>
-              <a href="#" data-language-name="<%= lang.keys.first %>"><%= lang.values.first %></a>
-            <% else %>
-              <a href="#" data-language-name="<%= lang %>"><%= lang %></a>
+    <%= partial("shared/navigation") %>
+
+    <div class="container-fluid position-relative doc-container">
+      <div class="row no-gutters">
+        <div class="col-lg-2 col-12">
+          <a href="#" id="nav-button">
+            <span>
+              Doc Nav
+            </span>
+          </a>
+
+          <div class="toc-wrapper sticky-top">
+            <a class="navbar-brand" href="/api">
+                <%= image_tag('sparktoro-logo.svg', :height => '40', :alt => 'SparkToro', :class => 'logo') %>
+            </a>
+
+            <% if language_tabs.any? %>
+              <div class="lang-selector sticky-top">
+                <% language_tabs.each do |lang| %>
+                  <% if lang.is_a? Hash %>
+                    <a href="#" data-language-name="<%= lang.keys.first %>"><%= lang.values.first %></a>
+                  <% else %>
+                    <a href="#" data-language-name="<%= lang %>"><%= lang %></a>
+                  <% end %>
+                <% end %>
+              </div>
             <% end %>
-          <% end %>
-        </div>
-      <% end %>
-      <ul id="toc" class="toc-list-h1">
-        <% toc_data(page_content).each do |h1| %>
-          <li>
-            <a href="#<%= h1[:id] %>" class="toc-h1 toc-link" data-title="<%= h1[:title] %>"><%= h1[:content] %></a>
-            <% if h1[:children].length > 0 %>
-              <ul class="toc-list-h2">
-                <% h1[:children].each do |h2| %>
-                  <li>
-                    <a href="#<%= h2[:id] %>" class="toc-h2 toc-link" data-title="<%= h2[:title] %>"><%= h2[:content] %></a>
-                  </li>
+            <ul id="toc" class="toc-list-h1">
+              <% toc_data(page_content).each do |h1| %>
+                <li>
+                  <a href="#<%= h1[:id] %>" class="toc-h1 toc-link" data-title="<%= h1[:title] %>"><%= h1[:content] %></a>
+                  <% if h1[:children].length > 0 %>
+                    <ul class="toc-list-h2">
+                      <% h1[:children].each do |h2| %>
+                        <li>
+                          <a href="#<%= h2[:id] %>" class="toc-h2 toc-link" data-title="<%= h2[:title] %>"><%= h2[:content] %></a>
+                        </li>
+                      <% end %>
+                    </ul>
+                  <% end %>
+                </li>
+              <% end %>
+            </ul>
+            <% if current_page.data.search %>
+              <div class="search">
+                <input type="text" class="search" id="input-search" placeholder="Search">
+              </div>
+              <ul class="search-results"></ul>
+            <% end %>
+            <% if current_page.data.toc_footers %>
+              <ul class="toc-footer">
+                <% current_page.data.toc_footers.each do |footer| %>
+                  <li><%= footer %></li>
                 <% end %>
               </ul>
             <% end %>
-          </li>
-        <% end %>
-      </ul>
-      <% if current_page.data.search %>
-        <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
-      <% end %>
-      <% if current_page.data.toc_footers %>
-        <ul class="toc-footer">
-          <% current_page.data.toc_footers.each do |footer| %>
-            <li><%= footer %></li>
-          <% end %>
-        </ul>
-      <% end %>
-    </div>
-    <div class="page-wrapper">
-      <div class="dark-box"></div>
-      <div class="content">
-        <%= page_content %>
-      </div>
-      <div class="dark-box">
-        <% if language_tabs.any? %>
-          <div class="lang-selector">
-            <% language_tabs.each do |lang| %>
-              <% if lang.is_a? Hash %>
-                <a href="#" data-language-name="<%= lang.keys.first %>"><%= lang.values.first %></a>
-              <% else %>
-                <a href="#" data-language-name="<%= lang %>"><%= lang %></a>
-              <% end %>
-            <% end %>
           </div>
-        <% end %>
+        </div>
+
+        <div class="col-lg-10 col-12">
+          <div class="page-wrapper">
+            <div class="dark-box"></div>
+            <div class="content">
+              <%= page_content %>
+            </div>
+            <div class="dark-box">
+              <% if language_tabs.any? %>
+                <div class="lang-selector sticky-top">
+                  <% language_tabs.each do |lang| %>
+                    <% if lang.is_a? Hash %>
+                      <a href="#" data-language-name="<%= lang.keys.first %>"><%= lang.values.first %></a>
+                    <% else %>
+                      <a href="#" data-language-name="<%= lang %>"><%= lang %></a>
+                    <% end %>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <%= partial("shared/footer") %>
   </body>
 </html>

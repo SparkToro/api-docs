@@ -1,0 +1,18 @@
+$font-family-main: 'Montserrat', sans-serif !default;
+$font-family-secondary: 'Open Sans', sans-serif !default;
+$font-family-drop: 'Kumar One Outline', cursive;
+
+$main-font-color: #414042 !default;
+
+$secondary-red: #C9344C;
+
+$light-grey: #bcbec0;
+
+$secondary:       $secondary-red !default;
+
+$env: "production" !default;
+$rootUrl: "https://sparktoro.com";
+//usage example: I want to show/hide responsive helper from sass-mq depending on env
+@if $env == "development" {
+    $rootUrl: "http://sparktoro.local:8080";
+} 
