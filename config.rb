@@ -47,6 +47,7 @@ configure :build do
   # the .woff2 extension only does not work as .woff will still activate it so have to
   # have both. See https://github.com/slatedocs/slate/issues/1171 for more details.
   activate :asset_hash, :exts => app.config[:asset_extensions] - %w[.woff .woff2]
+  activate :asset_host, :host => '//sparktoro.com/api/docs/'
   # If you're having trouble with Middleman hanging, commenting
   # out the following two lines has been known to help
   activate :minify_css
