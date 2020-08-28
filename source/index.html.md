@@ -62,7 +62,233 @@ SparkToro expects for the API key to be included in all API requests to the serv
 You must replace <code>your_bearer_key</code> with your personal API key.
 </aside>
 
-# Results
+# Audience Intelligence
+
+## Social Accounts
+
+```http
+# With shell, you can just pass the correct header with each request
+GET https://api.sparktoro.com/search/social
+Accept: application/json
+Authorization: Bearer your_bearer_key
+```
+
+```shell
+# With shell, you can just pass the correct header with each request
+curl "https://api.sparktoro.com/search/social"
+  -H "Authorization: Bearer your_bearer_key"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "name": "Fluffums",
+    "breed": "calico",
+    "fluffiness": 6,
+    "cuteness": 7
+  },
+  {
+    "id": 2,
+    "name": "Max",
+    "breed": "unknown",
+    "fluffiness": 5,
+    "cuteness": 10
+  }
+]
+```
+
+This endpoint retrieves all kittens.
+
+### HTTP Request
+
+`GET http://example.com/api/kittens`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+include_cats | false | If set to true, the result will also include cats.
+available | true | If set to false, the result will include kittens that have already been adopted.
+
+<aside class="success">
+Remember — a happy kitten is an authenticated kitten!
+</aside>
+
+## Domains
+
+```http
+# With shell, you can just pass the correct header with each request
+GET https://api.sparktoro.com/search/websites
+Accept: application/json
+Authorization: Bearer your_bearer_key
+```
+
+```shell
+# With shell, you can just pass the correct header with each request
+curl "https://api.sparktoro.com/search/websites"
+  -H "Authorization: Bearer your_bearer_key"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "name": "Fluffums",
+    "breed": "calico",
+    "fluffiness": 6,
+    "cuteness": 7
+  },
+  {
+    "id": 2,
+    "name": "Max",
+    "breed": "unknown",
+    "fluffiness": 5,
+    "cuteness": 10
+  }
+]
+```
+
+This endpoint retrieves all kittens.
+
+### HTTP Request
+
+`GET http://example.com/api/kittens`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+include_cats | false | If set to true, the result will also include cats.
+available | true | If set to false, the result will include kittens that have already been adopted.
+
+<aside class="success">
+Remember — a happy kitten is an authenticated kitten!
+</aside>
+
+## Podcasts
+
+```http
+# With shell, you can just pass the correct header with each request
+GET https://api.sparktoro.com/search/podcasts
+Accept: application/json
+Authorization: Bearer your_bearer_key
+```
+
+```shell
+# With shell, you can just pass the correct header with each request
+curl "https://api.sparktoro.com/search/podcasts"
+  -H "Authorization: Bearer your_bearer_key"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "name": "Fluffums",
+    "breed": "calico",
+    "fluffiness": 6,
+    "cuteness": 7
+  },
+  {
+    "id": 2,
+    "name": "Max",
+    "breed": "unknown",
+    "fluffiness": 5,
+    "cuteness": 10
+  }
+]
+```
+
+This endpoint retrieves all kittens.
+
+### HTTP Request
+
+`GET http://example.com/api/kittens`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+include_cats | false | If set to true, the result will also include cats.
+available | true | If set to false, the result will include kittens that have already been adopted.
+
+<aside class="success">
+Remember — a happy kitten is an authenticated kitten!
+</aside>
+
+## YouTube
+
+```http
+# With shell, you can just pass the correct header with each request
+GET https://api.sparktoro.com/search/youtube
+Accept: application/json
+Authorization: Bearer your_bearer_key
+```
+
+```shell
+# With shell, you can just pass the correct header with each request
+curl "https://api.sparktoro.com/search/youtube"
+  -H "Authorization: Bearer your_bearer_key"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "name": "Fluffums",
+    "breed": "calico",
+    "fluffiness": 6,
+    "cuteness": 7
+  },
+  {
+    "id": 2,
+    "name": "Max",
+    "breed": "unknown",
+    "fluffiness": 5,
+    "cuteness": 10
+  }
+]
+```
+
+This endpoint retrieves all kittens.
+
+### HTTP Request
+
+`GET http://example.com/api/kittens`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+include_cats | false | If set to true, the result will also include cats.
+available | true | If set to false, the result will include kittens that have already been adopted.
+
+<aside class="success">
+Remember — a happy kitten is an authenticated kitten!
+</aside>
+
+## Results
 
 All results are formated in a similar way to help you process the results. 
 
@@ -136,144 +362,4 @@ All results are formated in a similar way to help you process the results.
 }
 ```
 
-# Audience Intelligence
-
-## Social Accounts
-
-```http
-# With shell, you can just pass the correct header with each request
-GET https://api.sparktoro.com/search/social
-Accept: application/json
-Authorization: Bearer your_bearer_key
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "https://api.sparktoro.com/search/social"
-  -H "Authorization: Bearer your_bearer_key"
-```
-
-> The above command returns JSON structured like this:
-
-```json
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
-```
-
-This endpoint retrieves all kittens.
-
-### HTTP Request
-
-`GET http://example.com/api/kittens`
-
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-## Get a Specific Kitten
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: Bearer your_bearer_key"
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
-```
-
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
-### HTTP Request
-
-`GET http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
-
-## Delete a Specific Kitten
-
-```ruby
-require 'SparkToro'
-
-api = SparkToro::APIClient.authorize!('Bearer your_bearer_key')
-api.kittens.delete(2)
-```
-
-```python
-import SparkToro
-
-api = SparkToro.authorize('Bearer your_bearer_key')
-api.kittens.delete(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -X DELETE
-  -H "Authorization: Bearer your_bearer_key"
-```
-
-```javascript
-const SparkToro = require('SparkToro');
-
-let api = SparkToro.authorize('Bearer your_bearer_key');
-let max = api.kittens.delete(2);
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "deleted" : ":("
-}
-```
-
-This endpoint deletes a specific kitten.
-
-### HTTP Request
-
-`DELETE http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to delete
 
