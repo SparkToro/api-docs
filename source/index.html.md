@@ -68,14 +68,14 @@ You must replace <code>your_bearer_key</code> with your personal API key.
 
 ```http
 # With shell, you can just pass the correct header with each request
-GET https://api.sparktoro.com/search/social
+GET https://api.sparktoro.com/search/social?keyword=seo&type=keyword
 Accept: application/json
 Authorization: Bearer your_bearer_key
 ```
 
 ```shell
 # With shell, you can just pass the correct header with each request
-curl "https://api.sparktoro.com/search/social"
+curl "https://api.sparktoro.com/search/social?keyword=seo&type=keyword"
   -H "Authorization: Bearer your_bearer_key"
 ```
 
@@ -85,53 +85,95 @@ curl "https://api.sparktoro.com/search/social"
 HTTP/1.1 200 OK
 Content-Type: application/json
 
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
+{
+  "data": [
+    {
+      "id": "15651700",
+      "account_type": 2,
+      "description": "Helping SEOs build innovative organic search strategies with easy-to-use tools, reliable data, and accessible training since 2004.",
+      "engagement_score": 21,
+      "followers": 555612,
+      "friends_count": 3342,
+      "global_followers": 895086,
+      "location": "Seattle, Washington",
+      "name": "Moz",
+      "profile_image": "https://pbs.twimg.com/profile_images/1266046550817435649/Sf6PL1GT_normal.png",
+      "relationships": [
+        {
+          "type": "domain",
+          "username": "https://moz.com",
+          "data": null,
+          "clean_domain": "moz.com"
+        },
+        {
+          "type": "facebook",
+          "username": "moz",
+          "data": {
+            "likes": "262699",
+            "follows": "271733"
+          }
+        },
+        ...
+      ],
+      "share": 59.36,
+      "sparkscore": 59,
+      "tweets_7_days": 22,
+      "twitter_social_url": "https://mz.cm/3eKDzck",
+      "username": "Moz",
+      "verified": 1
+    },
+    ...
+  ],
+  "meta": {
+    "source_count": 212631,
+    "query": "seo",
+    "type": "keyword",
+    "api_limits": {
+      "previous": false,
+      "used": 1,
+      "available": 500,
+      "plan_id": 2
+    },
+    "query_cost": 1
   }
-]
+}
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all social accounts that have an influence over the search terms sent across.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET https://api.sparktoro.com/search/social?keyword=seo&type=keyword`
 
 ### Query Parameters
 
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+Parameter | Description
+--------- | -----------
+keyword | <strong>string (required)</strong> The keyword, website, hashtag, or social account to search for.
+type | <strong>string (required)</strong> There are 5 type of searches that can be done, see <a href="#search-types">Search Types</a> for more info.  
+social_gems | <strong>boolean</strong> Display only hidden gems.
+follower_max | <strong>integer</strong> Max amount of global followers.
+follower_min | <strong>integer</strong> Min amount of global followers.
+sparkscore_max | <strong>integer</strong> Max SparkScore (1 to 100).
+sparkscore_min | <strong>integer</strong> Min SparkScore (1 to 100).
+engagement_max | <strong>integer</strong> Min engagement score (1 to 100).
+engagement_min | <strong>integer</strong> Max engagement score (1 to 100).
+verified | <strong>boolean</strong> Only display verified account when true.
+account_type | <strong>integer</strong> Set to 1 for only individuals, 2 for companies.
+popular | <strong>boolean</strong> Include popular accounts when true.
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-## Domains
+## Websites
 
 ```http
 # With shell, you can just pass the correct header with each request
-GET https://api.sparktoro.com/search/websites
+GET https://api.sparktoro.com/search/websites?keyword=seo&type=keyword
 Accept: application/json
 Authorization: Bearer your_bearer_key
 ```
 
 ```shell
 # With shell, you can just pass the correct header with each request
-curl "https://api.sparktoro.com/search/websites"
+curl "https://api.sparktoro.com/search/websites?keyword=seo&type=keyword"
   -H "Authorization: Bearer your_bearer_key"
 ```
 
@@ -141,53 +183,75 @@ curl "https://api.sparktoro.com/search/websites"
 HTTP/1.1 200 OK
 Content-Type: application/json
 
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
+{
+  "data": [
+    {
+      "id": "41020",
+      "domain": "searchengineland.com",
+      "meta_description": "News On Search Engines, Search Engine Optimization (SEO) & Search Engine Marketing (SEM)",
+      "moz_da": 90,
+      "moz_links": 88929,
+      "relationships": [
+        {
+          "type": "facebook",
+          "user_id": 1059801,
+          "username": "searchengineland",
+          "data": {
+            "likes": "200464",
+            "follows": "206892"
+          }
+        },
+        ...
+      ],
+      "share": 46.0
+    },
+    ...
+  ],
+  "meta": {
+    "source_count": 212631,
+    "query": "seo",
+    "type": "keyword",
+    "api_limits": {
+      "previous": false,
+      "used": 1,
+      "available": 500,
+      "plan_id": 2
+    },
+    "query_cost": 1
   }
-]
+}
 ```
 
 This endpoint retrieves all kittens.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET https://api.sparktoro.com/search/websites?keyword=seo&type=keyword&moz_da_min=50`
 
 ### Query Parameters
 
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
+Parameter | Description
+--------- | -----------
+keyword | <strong>string (required)</strong> The keyword, website, hashtag, or social account to search for.
+type | <strong>string (required)</strong> There are 5 type of searches that can be done, see <a href="#search-types">Search Types</a> for more info.  
+web_gems | <strong>boolean</strong> Display only hidden gems.
+moz_da_max | <strong>integer</strong> Max Moz Domain Authority (1 to 100).
+moz_da_min | <strong>integer</strong> Min Moz Domain Authority (1 to 100).
+moz_links_max | <strong>integer</strong> Max Moz Linking Domains to display.
+moz_links_min | <strong>integer</strong> Min Moz Linking Domains to display.
 
 ## Podcasts
 
 ```http
 # With shell, you can just pass the correct header with each request
-GET https://api.sparktoro.com/search/podcasts
+GET https://api.sparktoro.com/search/podcasts?keyword=seo&type=keyword
 Accept: application/json
 Authorization: Bearer your_bearer_key
 ```
 
 ```shell
 # With shell, you can just pass the correct header with each request
-curl "https://api.sparktoro.com/search/podcasts"
+curl "https://api.sparktoro.com/search/podcasts?keyword=seo&type=keyword"
   -H "Authorization: Bearer your_bearer_key"
 ```
 
@@ -197,53 +261,70 @@ curl "https://api.sparktoro.com/search/podcasts"
 HTTP/1.1 200 OK
 Content-Type: application/json
 
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
+{
+  "data": [
+    {
+      "id": 922993934,
+      "artwork": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts123/v4/eb/f1/15/ebf1159b-864d-ff87-cde0-6279313ffe24/mza_12389167778388277055.jpg/268x0w.jpg",
+      "author": "Search Engine Journal",
+      "episodes": 230,
+      "global_followers": 407636,
+      "link": "https://itunes.apple.com/us/podcast/search-engine-nerds/id922993934",
+      "name": "SearchEngineJournal®",
+      "podcast_description": "Welcome to The Search Engine Journal Show! This is the official podcast of Search Engine Journal. We talk all things SEO, PPC, social media, content marketing, and digital marketing with the top industry experts and authorities. Your hosts will be Brent Csutoras, Danny Goodwin, and Loren Baker.Welcome to The Search Engine Journal Show! This is the official podcast of Search Engine Journal. We talk all things SEO, PPC, social media, content marketing, and digital marketing with the top industry experts and authorities. Your hosts will be Brent Csutoras, Danny Goodwin, and Loren Baker.",
+      "profile_image": "https://pbs.twimg.com/profile_images/1082875994623565824/kLGfvlP4_normal.jpg",
+      "recent_date": "2020-08-14",
+      "review_count": 45,
+      "share": 45.42,
+      "stars": 4.30,
+      "title": "The Search Engine Journal Show",
+      "website": "https://www.searchenginejournal.com"
+    },
+    ...
+  ],
+  "meta": {
+    "source_count": 212631,
+    "query": "seo",
+    "type": "keyword",
+    "api_limits": {
+      "previous": false,
+      "used": 1,
+      "available": 500,
+      "plan_id": 2
+    },
+    "query_cost": 1
   }
-]
+}
 ```
 
 This endpoint retrieves all kittens.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET https://api.sparktoro.com/search/podcasts?keyword=seo&type=keyword`
 
 ### Query Parameters
 
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
+Parameter | Description
+--------- | -----------
+keyword | <strong>string (required)</strong> The keyword, website, hashtag, or social account to search for.
+type | <strong>string (required)</strong> There are 5 type of searches that can be done, see <a href="#search-types">Search Types</a> for more info.  
+reviews_min | <strong>integer</strong> Max number of reviews for the podcast.
+reviews_max | <strong>integer</strong> Min number of reviews for the podcast.
+episode_date | <strong>integer</strong> When was the last podcast episode, inputs are 30, 60 or greater than 90 days.
 
 ## YouTube
 
 ```http
 # With shell, you can just pass the correct header with each request
-GET https://api.sparktoro.com/search/youtube
+GET https://api.sparktoro.com/search/youtube?keyword=seo&type=keyword
 Accept: application/json
 Authorization: Bearer your_bearer_key
 ```
 
 ```shell
 # With shell, you can just pass the correct header with each request
-curl "https://api.sparktoro.com/search/youtube"
+curl "https://api.sparktoro.com/search/youtube?keyword=seo&type=keyword"
   -H "Authorization: Bearer your_bearer_key"
 ```
 
@@ -253,40 +334,70 @@ curl "https://api.sparktoro.com/search/youtube"
 HTTP/1.1 200 OK
 Content-Type: application/json
 
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
+{
+  "data": [
+    {
+      "id": "1059801",
+      "average_views": 205,
+      "channel_url": "https://youtube.com/user/SearchEngineland",
+      "description": "News & analysis on #SEO #PPC #Google #Bing & more. Sister to @marketingland @martech_today @smx @martechconf. Stay in the loop: https://t.co/AHbg7x2qFZ",
+      "global_followers": 690172,
+      "image": "https://yt3.ggpht.com/a/AATXAJzZgxM4GsYP7dgT8_7WATKcB1JzVP_qICGsfo8MME8=s88-c-k-c0x00ffffff-no-rj",
+      "join_date": "2008-12-29",
+      "latest_video": "2020-07-21",
+      "share": 29.5,
+      "sparkscore": 59,
+      "subscribers": 10100,
+      "title": "Search Engine Land",
+      "views": 4414363,
+      "youtube_description": "Search Engine Land is a must read hub for news and information about search engine marketing, optimization and how search engines such as Google, Yahoo and Bing work for searchers."
+    },
+    ...
+  ],
+  "meta": {
+    "source_count": 212631,
+    "query": "seo",
+    "type": "keyword",
+    "api_limits": {
+      "previous": false,
+      "used": 1,
+      "available": 500,
+      "plan_id": 2
+    },
+    "query_cost": 1
   }
-]
+}
 ```
 
 This endpoint retrieves all kittens.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET https://api.sparktoro.com/search/youtube?keyword=seo&type=keyword`
 
 ### Query Parameters
 
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+Parameter | Description
+--------- | -----------
+keyword | <strong>string (required)</strong> The keyword, website, hashtag, or social account to search for.
+type | <strong>string (required)</strong> There are 5 type of searches that can be done, see <a href="#search-types">Search Types</a> for more info.  
+subscribers_min | <strong>integer</strong> Min number of subscribers for the channel.
+subscribers_max | <strong>integer</strong> Max number of subscribers for the channel.
+views_min | <strong>integer</strong> Min number of views for the channel.
+views_max | <strong>integer</strong> Max number of views for the channel.
+avg_views_min | <strong>integer</strong> Min avg number of views for the channel.
+avg_views_max | <strong>integer</strong> Max avg number of views for the channel.
+last_video_date | <strong>integer</strong> When was the last video posted, inputs are 30, 60 or greater than 90 days.
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
+## Search Types
+
+Parameter | Description
+--------- | -----------
+keyword | A keyword that would be used to describe an audience.
+describe | A keyword that would be used to describe a person or business. 
+domain | A root domain, no subfolders. 
+hashtag | Any hashtag that a user might use. If sent with #, URL encode it as %23.
+follows | Search the followers of a specific social account. Pass through the full url of the social account (https://facebook.com/moz)
 
 ## Results
 
