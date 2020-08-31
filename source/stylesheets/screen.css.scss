@@ -565,8 +565,12 @@ html, body {
   }
 
   pre, blockquote {
-    // background-color: $code-bg;
+    //background-color: $code-bg;
     color: #fff;
+
+    @media (max-width: $phone-width) {
+      color: #333;
+    }
 
     margin: 0;
     width: $examples-width;
@@ -586,6 +590,10 @@ html, body {
       color: #fff;
       text-decoration: none;
       border-bottom: dashed 1px #ccc;
+
+      @media (max-width: $phone-width) {
+        color: #333;
+      }
     }
   }
 
@@ -601,6 +609,10 @@ html, body {
       //padding: $code-annotation-padding 2em;
       color: #fff;
       font-size: 15px;
+
+      @media (max-width: $phone-width) {
+        color: #333;
+      }
     }
   }
 }
