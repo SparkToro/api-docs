@@ -99,7 +99,7 @@ We also don't charge for queries that results in less than 150 `source_count` re
 
 ## Search Types
 
-Each audience intelligence query needs a keyword and a type defined 
+Each audience intelligence query needs a keyword and a type defined, below are the types you can use.
 
 Parameter | Description
 --------- | -----------
