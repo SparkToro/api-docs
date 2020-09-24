@@ -24,7 +24,7 @@ We are currently working on getting language bindings in Javascript in the futur
 
 # Authentication
 
-> To authorize, use this code:
+> To test your authorization, use this code:
 
 ```http
 # With shell, you can just pass the correct header with each request
@@ -52,6 +52,8 @@ Content-Type: application/json
 }
 ```
 
+> You only need to make this call to test or verify that your bearer key is working and valid.
+
 SparkToro uses API keys to allow access to the API. You can register a new SparkToro API key at our [API Dashbaord](https://sparktoro.com/api/dashboard).
 
 SparkToro expects for the API key to be included in all API requests to the server in a header that looks like the following:
@@ -62,7 +64,50 @@ SparkToro expects for the API key to be included in all API requests to the serv
 You must replace <code>your_bearer_key</code> with your personal API key.
 </aside>
 
+follows | Search the followers of a specific social account. Pass through the full url of the social account (https://facebook.com/moz)
+
+# Query Count
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "data": [...],
+  "meta": {
+    "source_count": 212631,
+    "query": "seo",
+    "type": "keyword",
+    "api_limits": {
+      "previous": false,
+      "used": 1,
+      "available": 500,
+      "plan_id": 2
+    },
+    "query_cost": 1
+  }
+}
+```
+
+Queries that are rerun during the same billing period do not count against your monthly quota. Each API call will include a meta section in the return JSON called `api_limits` which will let you know where you stand on your quota.
+
+The meta value `query_cost` will be 1 for a new query and 0 for a free query. 
+
+We also don't charge for queries that results in less than 150 `source_count` results. 
+
+
 # Audience Intelligence
+
+## Search Types
+
+Each audience intelligence query needs a keyword and a type defined 
+
+Parameter | Description
+--------- | -----------
+keyword | A keyword that would be used to describe an audience.
+describe | A keyword that would be used to describe a person or business. 
+domain | A root domain, no subfolders. 
+hashtag | Any hashtag that a user might use. If sent with #, URL encode it as %23.
+follows | A social url such as twitter.com/randfish
 
 ## Social Accounts
 
@@ -388,16 +433,6 @@ views_max | <strong>integer</strong> Max number of views for the channel.
 avg_views_min | <strong>integer</strong> Min avg number of views for the channel.
 avg_views_max | <strong>integer</strong> Max avg number of views for the channel.
 last_video_date | <strong>integer</strong> When was the last video posted, inputs are 30, 60 or greater than 90 days.
-
-## Search Types
-
-Parameter | Description
---------- | -----------
-keyword | A keyword that would be used to describe an audience.
-describe | A keyword that would be used to describe a person or business. 
-domain | A root domain, no subfolders. 
-hashtag | Any hashtag that a user might use. If sent with #, URL encode it as %23.
-follows | Search the followers of a specific social account. Pass through the full url of the social account (https://facebook.com/moz)
 
 ## Results
 
