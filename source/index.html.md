@@ -267,7 +267,7 @@ Content-Type: application/json
 }
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all domains that have an influence over the search terms sent across.
 
 ### HTTP Request
 
@@ -342,7 +342,7 @@ Content-Type: application/json
 }
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all podcasts that have an influence over the search terms sent across.
 
 ### HTTP Request
 
@@ -414,7 +414,7 @@ Content-Type: application/json
 }
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all YouTube Channels that have an influence over the search terms sent across.
 
 ### HTTP Request
 
