@@ -1,0 +1,69 @@
+```http
+# With shell, you can just pass the correct header with each request
+GET https://api.sparktoro.com/audience/political/domain?keyword=seo&type=keyword
+Accept: application/json
+Authorization: Bearer your_bearer_key
+```
+
+```shell
+# With shell, you can just pass the correct header with each request
+curl "https://api.sparktoro.com/audience/political/domain?keyword=seo&type=keyword"
+  -H "Authorization: Bearer your_bearer_key"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "data": [
+    {
+      "bias": "left",
+      "share": 11.90
+    },
+    {
+      "bias": "left-center",
+      "share": 39.29
+    },
+    {
+      "bias": "center",
+      "share": 37.56
+    },
+    {
+      "bias": "right-center",
+      "share": 7.78
+    },
+    {
+      "bias": "right",
+      "share": 3.44
+    }
+  ],
+  "meta": {
+    "source_count": 212631,
+    "query": "seo",
+    "type": "keyword",
+    "api_limits": {
+      "previous": false,
+      "used": 1,
+      "available": 500,
+      "plan_id": 2
+    },
+    "query_cost": 1
+  }
+}
+```
+
+This endpoint retrieves all press accounts that have an influence over the search terms sent across.
+
+### HTTP Request
+
+`GET https://api.sparktoro.com/audience/political/domain?keyword=seo&type=keyword`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+keyword | <strong>string (required)</strong> The keyword, website, hashtag, or social account to search for.
+type | <strong>string (required)</strong> There are 5 type of searches that can be done, see <a href="#type-options">Search Types</a> for more info.
