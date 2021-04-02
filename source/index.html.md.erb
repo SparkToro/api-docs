@@ -1,0 +1,237 @@
+---
+title: SparkToro API Documentation
+
+language_tabs: # must be one of https://git.io/vQNgJ
+  - shell
+  - http
+
+toc_footers:
+  - <a href='/account/register?redirect_to=/api/dashboard'>Sign up for an API Key</a>
+
+includes:
+  - errors
+
+search: true
+
+code_clipboard: true
+---
+
+# Introduction
+
+Welcome to the SparkToro API! You can use our API to access SparkToro API endpoints, which can get information which social accounts, websites, podcasts, and YouTube channels influence your query.
+
+We are currently working on getting language bindings in Javascript in the future, for now you can use your favorite http request in the language of your choice.
+
+# Authentication
+
+> To test your authorization, use this code:
+
+```http
+# With shell, you can just pass the correct header with each request
+GET https://api.sparktoro.com/authorization
+Accept: application/json
+Authorization: Bearer your_bearer_key
+```
+
+```shell
+# With shell, you can just pass the correct header with each request
+curl "https://api.sparktoro.com/authorization"
+  -H "Authorization: Bearer your_bearer_key"
+```
+
+> Make sure to replace `your_bearer_key` with your API key.
+
+> A valid bearer key will true the following response:
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "authorization": true
+}
+```
+
+> You only need to make this call to test or verify that your bearer key is working and valid.
+
+SparkToro uses API keys to allow access to the API. You can register a new SparkToro API key at our [API Dashbaord](https://sparktoro.com/api/dashboard).
+
+SparkToro expects for the API key to be included in all API requests to the server in a header that looks like the following:
+
+`Authorization: Bearer your_bearer_key`
+
+<aside class="notice">
+You must replace <code>your_bearer_key</code> with your personal API key.
+</aside>
+
+follows | Search the followers of a specific social account. Pass through the full url of the social account (https://facebook.com/moz)
+
+# Meta Data
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "data": [...],
+  "meta": {
+    "source_count": 212631,
+    "query": "seo",
+    "type": "keyword",
+    "api_limits": {
+      "previous": false,
+      "used": 1,
+      "available": 500,
+      "plan_id": 2
+    },
+    "query_cost": 1
+  }
+}
+```
+
+Queries that are rerun during the same billing period do not count against your monthly quota. Each API call will include a meta section in the return JSON called `api_limits` which will let you know where you stand on your quota.
+
+The meta value `query_cost` will be 1 for a new query and 0 for a free query. 
+
+We also don't charge for queries that results in less than 150 `source_count` results. 
+
+
+
+# Search Parameters
+
+## Required Parameters
+
+Each audience intelligence query needs a keyword and a type defined, below are the types you can use.
+
+Parameter | Description
+--------- | -----------
+keyword | Keyword, hashtag, domain, or social account you are searching.
+type | Type of SparkToro query you are running, see <a href="/#type-options">below for options</a>.
+
+## Type Options
+
+The type parameter defines what kind of query you are running. See below for the options that are available.
+
+Parameter | Description
+--------- | -----------
+keyword | A keyword that would be used to describe an audience.
+describe | A keyword that would be used to describe a person or business. 
+domain | A root domain, no subfolders. 
+hashtag | Any hashtag that a user might use. If sent with #, URL encode it as %23.
+follows | A social url such as twitter.com/randfish
+
+# Endpoints
+
+## Social Accounts
+<%= partial "includes/endpoints/social.md.erb" %>
+
+## Websites
+<%= partial "includes/endpoints/websites.md.erb" %>
+
+## Podcasts
+<%= partial "includes/endpoints/podcasts.md.erb" %>
+
+## YouTube
+<%= partial "includes/endpoints/youtube.md.erb" %>
+
+## Press
+<%= partial "includes/endpoints/press.md.erb" %>
+
+## Share Keywords
+<%= partial "includes/endpoints/share_keywords.md.erb" %>
+
+## Share Phrases
+<%= partial "includes/endpoints/share_phrases.md.erb" %>
+
+## Bio Keywords
+<%= partial "includes/endpoints/bio_keywords.md.erb" %>
+
+## Hashtags
+<%= partial "includes/endpoints/hashtags.md.erb" %>
+
+## Geography
+<%= partial "includes/endpoints/geography.md.erb" %>
+
+## Political Sharing
+<%= partial "includes/endpoints/political_sharing.md.erb" %>
+
+## Political Social
+<%= partial "includes/endpoints/political_social.md.erb" %>
+
+## Political Factual
+<%= partial "includes/endpoints/political_factual.md.erb" %>
+
+# Result Format
+
+All results are formated in a similar way to help you process the results. 
+
+```json
+{
+  "data": [
+    {
+      "id": "22202",
+      "domain": "www.chevrolet.com",
+      "meta_description": "Official Chevrolet site: see Chevy cars, trucks, crossovers & SUVs - see photos/videos, find vehicles, compare competitors, build your own Chevy & more.",
+      "moz_da": 76,
+      "moz_links": 35116,
+      "relationships": [
+          {
+              "type": "facebook",
+              "user_id": 66395780,
+              "username": "chevrolet",
+              "data": {
+                  "likes": "22484478",
+                  "follows": "22385643"
+              }
+          },
+          {
+              "type": "instagram",
+              "user_id": 66395780,
+              "username": "chevrolet",
+              "data": null
+          },
+          {
+              "type": "linkedin",
+              "user_id": 66395780,
+              "username": "chevrolet",
+              "data": null
+          },
+          {
+              "type": "twitter",
+              "username": "chevrolet",
+              "name": "Chevrolet",
+              "user_id": 66395780,
+              "followers": 1074055,
+              "friends": 19511
+          },
+          {
+              "type": "youtube",
+              "user_id": 66395780,
+              "username": "user/Chevrolet",
+              "data": {
+                  "subscribers": 645000,
+                  "views": "14509591",
+                  "join_date": "2006-01-11",
+                  "latest_video": "2020-03-01",
+                  "average_views": 9618.7999999999993
+              }
+          }
+      ],
+      "share": 4.46
+    },
+    ...
+  ],
+  "meta": {
+    "source_count": 63484,
+    "query": "chevy",
+    "type": "keyword",
+    "api_limits": {
+        "previous": true,
+        "used": 6,
+        "available": 25
+    },
+    "query_cost": 0
+  }
+}
+```
+
+

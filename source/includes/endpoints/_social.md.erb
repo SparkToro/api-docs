@@ -1,0 +1,95 @@
+```http
+# With shell, you can just pass the correct header with each request
+GET https://api.sparktoro.com/search/social?keyword=seo&type=keyword
+Accept: application/json
+Authorization: Bearer your_bearer_key
+```
+
+```shell
+# With shell, you can just pass the correct header with each request
+curl "https://api.sparktoro.com/search/social?keyword=seo&type=keyword"
+  -H "Authorization: Bearer your_bearer_key"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "data": [
+    {
+      "id": "15651700",
+      "account_type": 2,
+      "description": "Helping SEOs build innovative organic search strategies with easy-to-use tools, reliable data, and accessible training since 2004.",
+      "engagement_score": 21,
+      "followers": 555612,
+      "friends_count": 3342,
+      "global_followers": 895086,
+      "location": "Seattle, Washington",
+      "name": "Moz",
+      "profile_image": "https://pbs.twimg.com/profile_images/1266046550817435649/Sf6PL1GT_normal.png",
+      "relationships": [
+        {
+          "type": "domain",
+          "username": "https://moz.com",
+          "data": null,
+          "clean_domain": "moz.com"
+        },
+        {
+          "type": "facebook",
+          "username": "moz",
+          "data": {
+            "likes": "262699",
+            "follows": "271733"
+          }
+        },
+        ...
+      ],
+      "share": 59.36,
+      "sparkscore": 59,
+      "tweets_7_days": 22,
+      "twitter_social_url": "https://mz.cm/3eKDzck",
+      "username": "Moz",
+      "verified": 1
+    },
+    ...
+  ],
+  "meta": {
+    "source_count": 212631,
+    "query": "seo",
+    "type": "keyword",
+    "api_limits": {
+      "previous": false,
+      "used": 1,
+      "available": 500,
+      "plan_id": 2
+    },
+    "query_cost": 1
+  }
+}
+```
+
+This endpoint retrieves all social accounts that have an influence over the search terms sent across.
+
+### HTTP Request
+
+`GET https://api.sparktoro.com/search/social?keyword=seo&type=keyword`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+keyword | <strong>string (required)</strong> The keyword, website, hashtag, or social account to search for.
+type | <strong>string (required)</strong> There are 5 type of searches that can be done, see <a href="#search-types">Search Types</a> for more info.  
+social_gems | <strong>boolean</strong> Display only hidden gems.
+follower_max | <strong>integer</strong> Max amount of global followers.
+follower_min | <strong>integer</strong> Min amount of global followers.
+sparkscore_max | <strong>integer</strong> Max SparkScore (1 to 100).
+sparkscore_min | <strong>integer</strong> Min SparkScore (1 to 100).
+engagement_max | <strong>integer</strong> Min engagement score (1 to 100).
+engagement_min | <strong>integer</strong> Max engagement score (1 to 100).
+verified | <strong>boolean</strong> Only display verified account when true.
+account_type | <strong>integer</strong> Set to 1 for only individuals, 2 for companies.
+popular | <strong>boolean</strong> Include popular accounts when true.

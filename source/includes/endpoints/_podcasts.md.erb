@@ -1,0 +1,70 @@
+```http
+# With shell, you can just pass the correct header with each request
+GET https://api.sparktoro.com/search/podcasts?keyword=seo&type=keyword
+Accept: application/json
+Authorization: Bearer your_bearer_key
+```
+
+```shell
+# With shell, you can just pass the correct header with each request
+curl "https://api.sparktoro.com/search/podcasts?keyword=seo&type=keyword"
+  -H "Authorization: Bearer your_bearer_key"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "data": [
+    {
+      "id": 922993934,
+      "artwork": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts123/v4/eb/f1/15/ebf1159b-864d-ff87-cde0-6279313ffe24/mza_12389167778388277055.jpg/268x0w.jpg",
+      "author": "Search Engine Journal",
+      "episodes": 230,
+      "global_followers": 407636,
+      "link": "https://itunes.apple.com/us/podcast/search-engine-nerds/id922993934",
+      "name": "SearchEngineJournal®",
+      "podcast_description": "Welcome to The Search Engine Journal Show! This is the official podcast of Search Engine Journal. We talk all things SEO, PPC, social media, content marketing, and digital marketing with the top industry experts and authorities. Your hosts will be Brent Csutoras, Danny Goodwin, and Loren Baker.Welcome to The Search Engine Journal Show! This is the official podcast of Search Engine Journal. We talk all things SEO, PPC, social media, content marketing, and digital marketing with the top industry experts and authorities. Your hosts will be Brent Csutoras, Danny Goodwin, and Loren Baker.",
+      "profile_image": "https://pbs.twimg.com/profile_images/1082875994623565824/kLGfvlP4_normal.jpg",
+      "recent_date": "2020-08-14",
+      "review_count": 45,
+      "share": 45.42,
+      "stars": 4.30,
+      "title": "The Search Engine Journal Show",
+      "website": "https://www.searchenginejournal.com"
+    },
+    ...
+  ],
+  "meta": {
+    "source_count": 212631,
+    "query": "seo",
+    "type": "keyword",
+    "api_limits": {
+      "previous": false,
+      "used": 1,
+      "available": 500,
+      "plan_id": 2
+    },
+    "query_cost": 1
+  }
+}
+```
+
+This endpoint retrieves all podcasts that have an influence over the search terms sent across.
+
+### HTTP Request
+
+`GET https://api.sparktoro.com/search/podcasts?keyword=seo&type=keyword`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+keyword | <strong>string (required)</strong> The keyword, website, hashtag, or social account to search for.
+type | <strong>string (required)</strong> There are 5 type of searches that can be done, see <a href="#search-types">Search Types</a> for more info.  
+reviews_min | <strong>integer</strong> Max number of reviews for the podcast.
+reviews_max | <strong>integer</strong> Min number of reviews for the podcast.
+episode_date | <strong>integer</strong> When was the last podcast episode, inputs are 30, 60 or greater than 90 days.

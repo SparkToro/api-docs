@@ -1,0 +1,75 @@
+```http
+# With shell, you can just pass the correct header with each request
+GET https://api.sparktoro.com/search/websites?keyword=seo&type=keyword
+Accept: application/json
+Authorization: Bearer your_bearer_key
+```
+
+```shell
+# With shell, you can just pass the correct header with each request
+curl "https://api.sparktoro.com/search/websites?keyword=seo&type=keyword"
+  -H "Authorization: Bearer your_bearer_key"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "data": [
+    {
+      "id": "41020",
+      "domain": "searchengineland.com",
+      "meta_description": "News On Search Engines, Search Engine Optimization (SEO) & Search Engine Marketing (SEM)",
+      "moz_da": 90,
+      "moz_links": 88929,
+      "relationships": [
+        {
+          "type": "facebook",
+          "user_id": 1059801,
+          "username": "searchengineland",
+          "data": {
+            "likes": "200464",
+            "follows": "206892"
+          }
+        },
+        ...
+      ],
+      "share": 46.0
+    },
+    ...
+  ],
+  "meta": {
+    "source_count": 212631,
+    "query": "seo",
+    "type": "keyword",
+    "api_limits": {
+      "previous": false,
+      "used": 1,
+      "available": 500,
+      "plan_id": 2
+    },
+    "query_cost": 1
+  }
+}
+```
+
+This endpoint retrieves all domains that have an influence over the search terms sent across.
+
+### HTTP Request
+
+`GET https://api.sparktoro.com/search/websites?keyword=seo&type=keyword&moz_da_min=50`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+keyword | <strong>string (required)</strong> The keyword, website, hashtag, or social account to search for.
+type | <strong>string (required)</strong> There are 5 type of searches that can be done, see <a href="#search-types">Search Types</a> for more info.  
+web_gems | <strong>boolean</strong> Display only hidden gems.
+moz_da_max | <strong>integer</strong> Max Moz Domain Authority (1 to 100).
+moz_da_min | <strong>integer</strong> Min Moz Domain Authority (1 to 100).
+moz_links_max | <strong>integer</strong> Max Moz Linking Domains to display.
+moz_links_min | <strong>integer</strong> Min Moz Linking Domains to display.
