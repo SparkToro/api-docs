@@ -1,0 +1,179 @@
+```http
+# With shell, you can just pass the correct header with each request
+GET https://api.sparktoro.com/demographics?keyword=seo&type=keyword
+Accept: application/json
+Authorization: Bearer your_bearer_key
+```
+
+```shell
+# With shell, you can just pass the correct header with each request
+curl "https://api.sparktoro.com/demographics?keyword=seo&type=keyword"
+  -H "Authorization: Bearer your_bearer_key"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "gender": [
+      {
+        "name": "male",
+        "value": 28
+      },
+      ....
+      {
+        "name": "unknown",
+        "value": 20
+      }
+    ],
+    "age": [
+      {
+        "name": "18-25",
+        "value": 15
+      },
+      ....
+      {
+        "name": "unknown",
+        "value": 22
+      }
+    ],
+    "title_role": [
+      {
+        "name": "marketing",
+        "value": 16.69
+      },
+      {
+        "name": "operations",
+        "value": 8.55
+      }
+    ],
+    "industry": [
+      {
+        "name": "marketing and advertising",
+        "value": 37.39
+      },
+      {
+        "name": "internet",
+        "value": 15.63
+      }
+    ],
+    "company_size": [
+      {
+        "name": "1-10",
+        "value": 11
+      },
+      ....
+      {
+        "name": "unknown",
+        "value": 15
+      }
+    ],
+    "years_experience": [
+      {
+        "name": "0-5",
+        "value": 23
+      },
+      ....
+      {
+        "name": "unknown",
+        "value": -6
+      }
+    ],
+    "education_degree": [
+      {
+        "name": "bachelor of arts",
+        "value": 19.61
+      },
+      {
+        "name": "bachelor of science",
+        "value": 15.23
+      }
+    ],
+    "education_degree_type": [
+      {
+        "name": "bachelors",
+        "value": 20
+      },
+      ....
+      {
+        "name": "unknown",
+        "value": 32
+      }
+    ],
+    "school_name": [
+      {
+        "name": "university of phoenix",
+        "value": 0.97
+      },
+      {
+        "name": "cim | the chartered institute of marketing",
+        "value": 0.8
+      }
+    ],
+    "skills": [
+      {
+        "name": "social media marketing",
+        "value": 63.07
+      },
+      {
+        "name": "seo",
+        "value": 62.15
+      }
+    ],
+    "interests": [
+      {
+        "name": "education",
+        "value": 18.37
+      },
+      {
+        "name": "children",
+        "value": 15.71
+      }
+    ],
+    "education_majors": [
+      {
+        "name": "marketing",
+        "value": 22.85
+      },
+      {
+        "name": "management",
+        "value": 13.64
+      }
+    ]
+  },
+  "meta": {
+    "source_count": 212631,
+    "query": "seo",
+    "type": "keyword",
+    "api_limits": {
+      "previous": true,
+      "used": 3,
+      "available": 25,
+      "plan_id": 1
+    },
+    "query_cost": 0,
+    "sample": true
+  }
+}
+```
+
+This endpoint retrieves demographic data for accounts that match your query.
+
+### HTTP Request
+
+`GET https://api.sparktoro.com/demographics?keyword=seo&type=keyword`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+keyword | <strong>string (required)</strong> The keyword, website, hashtag, or social account to search for.
+type | <strong>string (required)</strong> There are 5 type of searches that can be done, see <a href="#type-options">Search Types</a> for more info.
+
+### Sample Data For Free Users
+
+Accounts on the free SparkToro tier will receive only sampled demographics data. You will see a `"sample": true` in the meta data of your query if this is the case.
